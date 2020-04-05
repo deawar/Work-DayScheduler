@@ -1,0 +1,26 @@
+{
+  "name": "workdayscheduler",
+  "version": "1.0.0",
+  "description": "Browser based calendar application that allows the user to save events for each hour of the day.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deawar/WorkDayScheduler.git"
+  },
+  "keywords": [
+    "jQuery",
+    "Moment.js"
+  ],
+  "author": "Dean Warren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deawar/WorkDayScheduler/issues"
+  },
+  "homepage": "https://github.com/deawar/WorkDayScheduler#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
