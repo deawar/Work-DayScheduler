@@ -4,14 +4,33 @@ $(document).ready(function () {
     var todayDate = moment().format('dddd' + ", " + 'LL');
     document.getElementById("currentDay").innerHTML = todayDate;
     var timeSlot = JSON.parse(localStorage.getItem("times"));
-    var saveComment = localStorage.getItem('comments')
-   
-    $("#9").val(saveComment)
-    //decideTime();
-})
+    
+    //tobe refoactored into a function
+    document.getElementById("currentDay").innerHTML = todayDate;
+    var saveComment = localStorage.getItem('9AM')
+    $("#9AM").val(saveComment)
+    var saveComment = localStorage.getItem('10AM')
+    $("#10AM").val(saveComment)
+    var saveComment = localStorage.getItem('11AM')
+    $("#11AM").val(saveComment)
+    var saveComment = localStorage.getItem('12PM')
+    $("12PM").val(saveComment)
+    var saveComment = localStorage.getItem('1PM')
+    $("#1PM").val(saveComment)
+    var saveComment = localStorage.getItem('2PM')
+    $("#2PM").val(saveComment)
+    var saveComment = localStorage.getItem('3PM')
+    $("#3PM").val(saveComment)
+    var saveComment = localStorage.getItem('4PM')
+    $("#4PM").val(saveComment)
+    var saveComment = localStorage.getItem('5PM')
+    $("#5PM").val(saveComment)
+ 
 
+})
+    //Array of time tags/Id's
     var times = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-    //var times = [ 9, 10, 11, 12, 13, 14, 15, 16, 17]; 
+    //to loop thru array times
     for (var i = 0; i < times.length; i++){
         var savedComment = localStorage.getItem(times[i]);
         if (savedComment !== ""){
@@ -19,17 +38,15 @@ $(document).ready(function () {
         }
         
     }    
-   
-        
-
+    
     var obj = moment();
-
     var todayDate = moment().format('dddd' + ", " + 'LL');
+    
     var currentTime = moment().format('HH');
      $('#currentDay').append(todayDate);
-    //
-    //displayBlocks()
     
+    
+    //function to create divs and insert classes
     function displayBlocks() {
         times.forEach(function(time){
             var $row = $(`<div class="row time-block col-12 hour"></div>`);
@@ -60,44 +77,15 @@ $(document).ready(function () {
     }
     const now = times
     console.log("Varibable now:", now);
-    // function decideTime() {
-    //     for (var i = 0; i < now.length; i++){
-    //         const htmlELEM = tB.children(".hour")[0]
-    //         const hourNow = htmlELEM.innerHTML.split("")[0]
-    //         console.log("hourNow: ", hourNow);
-    //         let temporality;
-    //         if (hourNow < now[0]) {
-    //             temporality = "past"
-    //         } else if (hourNow > now) {
-    //         temporality = "future"
-    //     } else {
-    //         temporality = "present"
-    //     }
-    //     (tB.children("textarea")[0].classList.add(temporality))
-    // }    
-
-//}
-
 
     //save button
-    $(document).on("click", ".saveBtn", function(){
-        var comment = $(this).siblings('.description');
-        var timeSlot = $(this).siblings('.id');
-        //console.log($(this).dataset.id);
-        //var getTime = $(this).siblings()
-        //localStorage.setItem("9", comment.val())
-        //localStorage.setItem(timeSlot.val(), comment.val())
-        localStorage.setItem("times", JSON.stringify(comment));
-    })
-
-//});    
-    //console.log(moment().day(Number|String));
-    //console.log(obj._locale._longDateFormat.L);
-    // var todayDate = moment().format('dddd' + ", " + 'LL');
-    // $('#currentDay').append(todayDate);
-   
-
-
+     $(document).on("click", ".saveBtn", function(){
+         var comment = $(this).siblings('.description').val();
+         var time = $(this).siblings('.description').attr('id');
+         console.log ("local time var: ", time);
+         localStorage.setItem(time, comment);
+    });
+        
 
 ////get the nearby values
 
@@ -105,9 +93,8 @@ $(document).ready(function () {
 
 ///function hour to update each hour
 
-//a variabel to get the current hour with moment hours
+//a variable to get the current hour with moment hours
 
-//loop over time blocks using .ech
 
 //check with if else and else if we've moved passed this time
 
