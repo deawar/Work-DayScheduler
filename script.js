@@ -4,27 +4,35 @@ $(document).ready(function () {
     var todayDate = moment().format('dddd' + ", " + 'LL');
     document.getElementById("currentDay").innerHTML = todayDate;
     var timeSlot = JSON.parse(localStorage.getItem("times"));
+    var times = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
     
-    //tobe refoactored into a function
+    //refoactored into a loop
     document.getElementById("currentDay").innerHTML = todayDate;
-    var saveComment = localStorage.getItem('9AM')
-    $("#9AM").val(saveComment)
-    var saveComment = localStorage.getItem('10AM')
-    $("#10AM").val(saveComment)
-    var saveComment = localStorage.getItem('11AM')
-    $("#11AM").val(saveComment)
-    var saveComment = localStorage.getItem('12PM')
-    $("12PM").val(saveComment)
-    var saveComment = localStorage.getItem('1PM')
-    $("#1PM").val(saveComment)
-    var saveComment = localStorage.getItem('2PM')
-    $("#2PM").val(saveComment)
-    var saveComment = localStorage.getItem('3PM')
-    $("#3PM").val(saveComment)
-    var saveComment = localStorage.getItem('4PM')
-    $("#4PM").val(saveComment)
-    var saveComment = localStorage.getItem('5PM')
-    $("#5PM").val(saveComment)
+    for (var i = 0; i < times.length; i++){
+        console.log("todayDate: ", todayDate);
+        console.log("currentDay: ", currentDay, "times[",i, "]: ", times[i]);
+        var saveComment = localStorage.getItem(times[i]);
+        $("#"+times[i]).val(saveComment);
+    }
+    // document.getElementById("currentDay").innerHTML = todayDate;
+    // var saveComment = localStorage.getItem('9AM')
+    // $("#9AM").val(saveComment)
+    // var saveComment = localStorage.getItem('10AM')
+    // $("#10AM").val(saveComment)
+    // var saveComment = localStorage.getItem('11AM')
+    // $("#11AM").val(saveComment)
+    // var saveComment = localStorage.getItem('12PM')
+    // $("12PM").val(saveComment)
+    // var saveComment = localStorage.getItem('1PM')
+    // $("#1PM").val(saveComment)
+    // var saveComment = localStorage.getItem('2PM')
+    // $("#2PM").val(saveComment)
+    // var saveComment = localStorage.getItem('3PM')
+    // $("#3PM").val(saveComment)
+    // var saveComment = localStorage.getItem('4PM')
+    // $("#4PM").val(saveComment)
+    // var saveComment = localStorage.getItem('5PM')
+    // $("#5PM").val(saveComment)
  
 
 })
