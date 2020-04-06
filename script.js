@@ -14,26 +14,6 @@ $(document).ready(function () {
         var saveComment = localStorage.getItem(times[i]);
         $("#"+times[i]).val(saveComment);
     }
-    // document.getElementById("currentDay").innerHTML = todayDate;
-    // var saveComment = localStorage.getItem('9AM')
-    // $("#9AM").val(saveComment)
-    // var saveComment = localStorage.getItem('10AM')
-    // $("#10AM").val(saveComment)
-    // var saveComment = localStorage.getItem('11AM')
-    // $("#11AM").val(saveComment)
-    // var saveComment = localStorage.getItem('12PM')
-    // $("12PM").val(saveComment)
-    // var saveComment = localStorage.getItem('1PM')
-    // $("#1PM").val(saveComment)
-    // var saveComment = localStorage.getItem('2PM')
-    // $("#2PM").val(saveComment)
-    // var saveComment = localStorage.getItem('3PM')
-    // $("#3PM").val(saveComment)
-    // var saveComment = localStorage.getItem('4PM')
-    // $("#4PM").val(saveComment)
-    // var saveComment = localStorage.getItem('5PM')
-    // $("#5PM").val(saveComment)
- 
 
 })
     //Array of time tags/Id's
