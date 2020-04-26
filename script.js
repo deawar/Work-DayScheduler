@@ -30,6 +30,7 @@ $(document).ready(function () {
     var obj = moment();
     var todayDate = moment().format('dddd' + ", " + 'LL');
     
+    //var currentTime = 16
     var currentTime = moment().format('HH');
      $('#currentDay').append(todayDate);
     
@@ -73,26 +74,3 @@ $(document).ready(function () {
          console.log ("local time var: ", time);
          localStorage.setItem(time, comment);
     });
-        
-
-////get the nearby values
-
-//save in local
-
-///function hour to update each hour
-
-//a variable to get the current hour with moment hours
-
-
-//check with if else and else if we've moved passed this time
-
-//remove and add classes
-
-//then call the hour update
-
-//variable to check if current time needs to be updated using setInterval
-
-// call each hour by id load save data/description from local storage (hint: .val and  .getItem)
-
-
-//$("#id").removeClass("past");

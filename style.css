@@ -49,7 +49,8 @@ textarea{
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
+  tex
 }
 
 .future {
@@ -68,4 +69,9 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+#rights {
+  text-align: center;
+  font-size: .6rem;
 }
